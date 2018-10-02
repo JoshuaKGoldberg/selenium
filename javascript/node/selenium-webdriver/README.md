@@ -1,5 +1,9 @@
 # selenium-webdriver
 
+## Sway's Fork
+
+## We're waiting for 4.0.0-alpha2 or 4.0.0 to be released and just using this in the meantime
+
 Selenium is a browser automation library. Most often used for testing
 web-applications, Selenium may be used for any task that requires automating
 interaction with the browser.

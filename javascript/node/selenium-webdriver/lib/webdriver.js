@@ -71,20 +71,6 @@ class Condition {
   description() {
     return this.description_;
   }
-
-  /**
-   * Allows for lenient instanceof checks
-   * @param {!(IThenable<T>|
-   *           Condition<T>|
-   *           function(!WebDriver): T)} condition - the condition instance
-   * @return {boolean}
-   */
-  static [Symbol.hasInstance](condition) {
-    return !!condition
-      && typeof condition === 'object'
-      && typeof condition.description === 'function'
-      && typeof condition.fn === 'function';
-  }
 }
 
 
@@ -632,8 +618,8 @@ function filterNonW3CCaps(capabilities) {
  */
 class WebDriver {
   /**
-   * @param {!(./session.Session|IThenable<!./session.Session>)} session Either
-   *     a known session or a promise that will be resolved to a session.
+   * @param {!(Session|IThenable<!Session>)} session Either a known session or a
+   *     promise that will be resolved to a session.
    * @param {!command.Executor} executor The executor to use when sending
    *     commands to the browser.
    * @param {(function(this: void): ?)=} onQuit A function to call, if any,
@@ -1454,8 +1440,8 @@ class Window {
 
   /**
    * Sets the current top-level window's size and position. You may update just
-   * the size by omitting `x` & `y`, or just the position by omitting
-   * `width` & `height` options.
+   * the size by omitting `width` & `height`, or just the position by omitting
+   * `x` & `y` options.
    *
    * @param {{x: (number|undefined),
    *          y: (number|undefined),

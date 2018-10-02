@@ -1,7 +1,7 @@
 {
-  "name": "selenium-webdriver",
-  "version": "4.0.0-alpha.1",
-  "description": "The official WebDriver JavaScript bindings from the Selenium project",
+  "name": "selenium-webdriver-sway-fork",
+  "version": "4.0.0-aleph.1",
+  "description": "Sway's temporary fork of the official WebDriver JavaScript bindings from the Selenium project",
   "license": "Apache-2.0",
   "keywords": [
     "automation",
